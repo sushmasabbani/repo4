@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+   - name: Ansible lineinfile regexp replace the example
+     lineinfile:
+       dest: /home/vagrant/p1.txt
+       regexp: '#(This is.*)'
+       line: '\1'
+       backrefs: yes

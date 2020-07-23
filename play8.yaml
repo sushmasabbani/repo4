@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+   - name: insertbefore 
+     lineinfile:
+       dest: /home/vagrant/p1.txt
+       line: checking insertbefoee 
+       insertbefore: BOF
+       create: yes

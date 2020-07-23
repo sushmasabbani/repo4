@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+   - name: stop nginx
+     service:
+      name: nginx
+      state: stopped

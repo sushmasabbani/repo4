@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+   - name: insert after 
+     lineinfile:
+       dest: /home/vagrant/p1.txt
+       line: inserting at the end of the file
+       insertafter: EOF
+       create: yes

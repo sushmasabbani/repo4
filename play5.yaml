@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+   - name: creating file
+     lineinfile:
+       dest: /home/vagrant/p1.txt
+       line: added line from playbook
+       state: present
+       create: yes

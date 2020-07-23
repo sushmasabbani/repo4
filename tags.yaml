@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  tasks:
+    - name: nginx
+      apt: name=nginx state=latest
+      tags:
+      - install
+    - name: start ginx
+      service:
+        name: nginx
+        state: started
+      tags:
+      - start
+    - name: stop nginx
+      service:
+        name: nginx
+        state: stopped
+      tags:
+      - stop
